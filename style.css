@@ -54,8 +54,8 @@ nav li {
 
 header {
     grid-area: a;
-    height: 100%;
-    width: auto;
+    /* height: 100%;
+    width: auto; */
 
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/color.jpg");
@@ -88,8 +88,8 @@ header {
 
 .listen {
     grid-area: b;
-    height: 100%;
-    width: auto;
+    /* height: 100%;
+    width: auto; */
 
     display: flex;
     flex-direction: column;
