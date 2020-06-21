@@ -110,10 +110,11 @@ iframe {
 
 h1 {
     font-family: "Bowlby One SC";
-    font-size: calc(.3rem + 10vw);
+    font-size: calc(.3rem + 9vw);
     color: yellow;
     text-shadow: 5px 5px 0 purple;
     mix-blend-mode: exclusion;
+    text-transform: uppercase;
 }
 
 h3 {
