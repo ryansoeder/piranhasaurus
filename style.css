@@ -1,0 +1,125 @@
+@font-face{
+    font-family: "Amity";
+    src: url('fonts/Amity Jack.ttf');
+  }
+  
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAV */
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: darkslategray;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* GRID LAYOUT */
+
+.page-wrapper {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid: "a" auto
+          "b" auto
+          "c" auto
+          /1fr; 
+}
+
+/* HEADER SECTION */
+
+header {
+    grid-area: a;
+    height: 100%;
+    width: auto;
+
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/color.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1592757638 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1592757638 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 160px;
+}
+
+.custom-shape-divider-bottom-1592757638 .shape-fill {
+    fill: #000000;
+}
+
+/* LISTEN SECTION */
+
+.listen {
+    grid-area: b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(transparent 5%, rgb(0, 0, 0)), url("img/bw.jpg");
+    background-position: center;
+    background-size: cover;
+
+    transform: scaleY(-1); /* invert background*/
+}
+
+iframe {
+    transform: scaleY(-1); /* put players rightside up again */
+}
+
+
+/* TEXT STYLING */
+
+h1 {
+    font-family: "Bowlby One SC";
+    font-size: calc(.3rem + 10vw);
+    color: yellow;
+    text-shadow: 5px 5px 0 purple;
+    mix-blend-mode: exclusion;
+}
+
+h3 {
+    font-family: "Lobster", cursive;
+    font-size: calc(.1rem + 5vw);
+    color: yellow;
+    text-shadow: 2px 2px 0 purple;
+
+}
