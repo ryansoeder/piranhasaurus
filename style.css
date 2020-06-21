@@ -64,7 +64,7 @@ header {
     position: relative;
 }
 
-.custom-shape-divider-bottom-1592757638 {
+.custom-shape-divider-bottom-1592778321 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,14 +73,14 @@ header {
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1592757638 svg {
+.custom-shape-divider-bottom-1592778321 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 160px;
+    height: 150px;
 }
 
-.custom-shape-divider-bottom-1592757638 .shape-fill {
+.custom-shape-divider-bottom-1592778321 .shape-fill {
     fill: #000000;
 }
 
@@ -96,17 +96,38 @@ header {
     align-items: center;
     justify-content: center;
 
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(transparent 5%, rgb(0, 0, 0)), url("img/bw.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/bw.jpg");
     background-position: center;
     background-size: cover;
 
     transform: scaleY(-1); /* invert background*/
+    position: relative;
 }
 
 iframe {
     transform: scaleY(-1); /* put players rightside up again */
 }
 
+/* .custom-shape-divider-bottom-1592778164 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1592778164 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1592778164 .shape-fill {
+    fill: #000000;
+} */
 
 /* TEXT STYLING */
 
