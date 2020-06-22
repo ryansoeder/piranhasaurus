@@ -19,20 +19,142 @@
 
 /* NAV */
 
-nav {
-    width: 100%;
-    height: 100%;
-    background-color: darkslategray;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-nav li {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+#menuToggle
+{
+  display: inline-block;
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+
+  border: 4px solid #cdcdcd;
+  padding: 5px 5px 0 5px;
+  
+  z-index: 100;
+
+  cursor: pointer;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: left;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle.open span
+{
+  opacity: 1;
+  transform: rotate(37deg) translate(3px, -3px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle.open span:nth-last-child(2)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle.open span:nth-last-child(1)
+{
+  transform: rotate(-37deg) translate(3px, 3px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: fixed;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out .3s;
+  padding: 100px;
+
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 99;
+  
+  background: rgba(0, 0, 0, .9);
+  -webkit-font-smoothing: antialiased;  /* to stop flickering of text in safari */
+  font-family: "Rammetto ONE";
+}
+
+#menu.open
+{
+    opacity: 1;
+}
+
+#menu a
+{
+  text-decoration: none;
+  color: yellow;
+  text-shadow: 2px 2px 0 purple;
+  
+  transition: color 0.3s ease;
+}
+
+#menu a:hover
+{
+  color: tomato;
+}
+
+
+#menu li
+{
+  font-size: 2rem;
 }
 
 

@@ -10,34 +10,51 @@
 </head>
 <body>
     <nav>
-        <a href="#"><img src="img/hamburger.png" alt="hamburger menu" id="burger"></a>
-        <ul>
-            <li>Top</li>
-            <li>Hear</li>
-            <li>See</li>
-            <li>Do</li>
+        <ul id="menu">
+            <a href="#"><li>Top</li></a>
+            <a href="#"><li>Hear</li></a>
+            <a href="#"><li>See</li></a>
+            <a href="#"><li>Go</li></a>
         </ul>
-    </nav>
+
+        <div id="menuToggle">
+                    
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+        </div>
+      </nav>
     <div class="page-wrapper">
         <header>
             <h1>Piranha<br>saurus</h1>
             <h3>"God sent me to rock and roll."</h3>
-            <div class="custom-shape-divider-bottom-1592784972">
+            <div class="custom-shape-divider-bottom-1592784972" alt="">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
                 </svg>
             </div>
         </header>
         <section class="listen">
-            <div class="custom-shape-divider-top-1592785101">
+            <div class="custom-shape-divider-top-1592785101" alt="">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
                 </svg>
             </div>
-                <iframe src="https://bandcamp.com/EmbeddedPlayer/album=4279170940/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/" seamless id="bandcamp"><a href="http://piranhasaurus.bandcamp.com/album/piranhasaurus">Piranhasaurus by Piranhasaurus</a></iframe>
+                <iframe src="https://bandcamp.com/EmbeddedPlayer/album=4279170940/size=large/bgcol=333333/linkcol=0f91ff/artwork=none/transparent=true/" seamless id="bandcamp" alt="bandcamp album player"><a href="http://piranhasaurus.bandcamp.com/album/piranhasaurus">Piranhasaurus by Piranhasaurus</a></iframe>
         </section>   
     </div>
 
-<!-- <script src="script.js"></script> -->
+<script src="script.js"></script>
 </body>
 </html>
