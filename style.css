@@ -44,9 +44,9 @@ nav li {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid: "a" auto
-          "b" auto
-          "c" auto
+    grid: "a" 100vh
+          "b" 100vh
+          "c" 100vh
           /1fr; 
 }
 
