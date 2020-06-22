@@ -138,8 +138,8 @@ header {
 /* TEXT STYLING */
 
 h1 {
-    font-family: "Bowlby One SC";
-    font-size: calc(.3rem + 8vw);
+    font-family: "Amity";
+    font-size: calc(.3rem + 10vw);
     color: yellow;
     text-shadow: 5px 5px 0 purple;
     mix-blend-mode: exclusion;
