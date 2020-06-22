@@ -54,7 +54,6 @@ nav li {
 header {
     grid-area: a;
 
-    text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/color.jpg");
     background-position: center;
     background-size: cover;
@@ -139,8 +138,8 @@ header {
 /* TEXT STYLING */
 
 h1 {
-    font-family: "Amity";
-    font-size: calc(.3rem + 10vw);
+    font-family: "Rammetto One";
+    font-size: calc(2rem + 5vw);
     color: yellow;
     text-shadow: 5px 5px 0 purple;
     mix-blend-mode: exclusion;
@@ -149,7 +148,7 @@ h1 {
 
 h3 {
     font-family: "Lobster", cursive;
-    font-size: calc(.1rem + 5vw);
+    font-size: calc(1rem + 2.5vw);
     color: yellow;
     text-shadow: 2px 2px 0 purple;
 
