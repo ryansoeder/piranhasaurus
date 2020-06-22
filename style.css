@@ -45,8 +45,7 @@ nav li {
     justify-content: center;
     align-content: center;
     grid: "a" 100vh
-          "b" 100vh
-          "c" 100vh
+          "b" auto
           /1fr; 
 }
 
@@ -109,8 +108,10 @@ header {
 
 #bandcamp {
     border: 0;
+    margin: 70px 0;
     width: 50%; 
-    width: 280px; 
+    min-width: 280px; 
+    height: 80%;
     height: 400px;
 }
 
