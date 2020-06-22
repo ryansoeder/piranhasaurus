@@ -54,8 +54,6 @@ nav li {
 
 header {
     grid-area: a;
-    /* height: 100%;
-    width: auto; */
 
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/color.jpg");
@@ -64,7 +62,7 @@ header {
     position: relative;
 }
 
-.custom-shape-divider-bottom-1592778321 {
+.custom-shape-divider-bottom-1592784972 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,67 +71,75 @@ header {
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1592778321 svg {
+.custom-shape-divider-bottom-1592784972 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 150px;
+    height: 50px;
 }
 
-.custom-shape-divider-bottom-1592778321 .shape-fill {
-    fill: #000000;
-}
 
 /* LISTEN SECTION */
 
 .listen {
     grid-area: b;
-    /* height: 100%;
-    width: auto; */
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/bw.jpg");
-    background-position: center;
-    background-size: cover;
-
-    transform: scaleY(-1); /* invert background*/
     position: relative;
 }
 
-iframe {
-    transform: scaleY(-1); /* put players rightside up again */
+.listen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/bw.jpg");
+    background-position: center;
+    background-size: cover;
+    transform: scaleY(-1); /* flip background */
 }
 
-/* .custom-shape-divider-bottom-1592778164 {
+#bandcamp {
+    border: 0;
+    width: 50%; 
+    width: 280px; 
+    height: 400px;
+}
+
+.custom-shape-divider-top-1592785101 {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1592778164 svg {
+.custom-shape-divider-top-1592785101 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 50px;
-    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1592778164 .shape-fill {
+.custom-shape-divider-top-1592785101 .shape-fill {
     fill: #000000;
-} */
+}
+
 
 /* TEXT STYLING */
 
 h1 {
     font-family: "Bowlby One SC";
-    font-size: calc(.3rem + 9vw);
+    font-size: calc(.3rem + 8vw);
     color: yellow;
     text-shadow: 5px 5px 0 purple;
     mix-blend-mode: exclusion;
@@ -147,3 +153,5 @@ h3 {
     text-shadow: 2px 2px 0 purple;
 
 }
+
+
