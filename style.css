@@ -16,8 +16,9 @@
     padding: 0;
 }
 
-
-/* NAV */
+/* ********** */
+/* NAVIGATION */
+/* ********** */
 
 nav ul {
     list-style: none;
@@ -25,98 +26,83 @@ nav ul {
     padding: 0;
 }
 
-#menuToggle
-{
-  display: inline-block;
-  position: fixed;
-  bottom: 50px;
-  right: 25px;
+/* BURGER MENU */
 
-  border: 4px solid #cdcdcd;
-  padding: 5px 5px 0 5px;
-  
-  z-index: 100;
+#menu-btn {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  bottom: 25px;
+  right: 23px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all .5s ease-in-out;
 
   cursor: pointer;
-  
-  -webkit-user-select: none;
-  user-select: none;
+  z-index: 100;
 }
 
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: left;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+#menu-btn__brgr {
+  height: 6px;
+  width: 50px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
+#menu-btn__brgr::before,
+#menu-btn__brgr::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 50px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
+#menu-btn__brgr::before {
+  transform: translateY(-16px);
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle.open span
-{
-  opacity: 1;
-  transform: rotate(37deg) translate(3px, -3px);
+#menu-btn__brgr::after {
+  transform: translateY(16px);
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle.open span:nth-last-child(2)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+/* BURGER ANIMATION */
+
+#menu-btn.open {
+  transform: rotate(180deg);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle.open span:nth-last-child(1)
-{
-  transform: rotate(-37deg) translate(3px, 3px);
+#menu-btn.open #menu-btn__brgr {
+  background-color: transparent;
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
+#menu-btn.open #menu-btn__brgr::before {
+  transform: rotate(45deg);
+}
+
+#menu-btn.open #menu-btn__brgr::after {
+  transform: rotate(-45deg);
+}
+
+/* NAV MENU */
+
+#menu {
   position: fixed;
-  margin: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  transition: all ease-in-out .3s;
+  margin: 0;
   padding: 100px;
+
+  transform: scale(0,1);
+  transition: opacity ease-in-out .3s;
 
   opacity: 0;
 
@@ -132,13 +118,12 @@ nav ul {
   font-family: "Rammetto ONE";
 }
 
-#menu.open
-{
+#menu.open {
+    transform: scale(1,1);
     opacity: 1;
 }
 
-#menu a
-{
+#menu a {
   text-decoration: none;
   color: yellow;
   text-shadow: 2px 2px 0 purple;
@@ -146,19 +131,19 @@ nav ul {
   transition: color 0.3s ease;
 }
 
-#menu a:hover
-{
+#menu a:hover {
   color: tomato;
 }
 
 
-#menu li
-{
+#menu li {
   font-size: 2rem;
 }
 
-
+/* *********** */
 /* GRID LAYOUT */
+/* *********** */
+
 
 .page-wrapper {
     margin: 0;
@@ -171,7 +156,9 @@ nav ul {
           /1fr; 
 }
 
+/* ************** */
 /* HEADER SECTION */
+/* ************** */
 
 header {
     grid-area: a;
@@ -181,6 +168,8 @@ header {
     background-size: cover;
     position: relative;
 }
+
+/* ARROW DIVIDER */
 
 .custom-shape-divider-bottom-1592784972 {
     position: absolute;
@@ -198,8 +187,9 @@ header {
     height: 50px;
 }
 
-
+/* ************** */
 /* LISTEN SECTION */
+/* ************** */
 
 .listen {
     grid-area: b;
@@ -236,6 +226,8 @@ header {
     height: 400px;
 }
 
+/* ARROW DIVIDER */
+
 .custom-shape-divider-top-1592785101 {
     position: absolute;
     top: 0;
@@ -256,8 +248,10 @@ header {
     fill: #000000;
 }
 
-
+/* ************ */
 /* TEXT STYLING */
+/* ************ */
+
 
 h1 {
     font-family: "Rammetto One";
