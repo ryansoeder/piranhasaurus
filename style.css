@@ -102,10 +102,12 @@ nav ul {
   padding: 100px;
 
   transform: scale(0,1);
-  transition: opacity ease-in-out .3s;
 
   opacity: 0;
 
+  transition:
+    opacity ease-in-out .3s,
+    transform 0s .3s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,6 +122,8 @@ nav ul {
 
 #menu.open {
     transform: scale(1,1);
+    transition: all ease-in-out .2s;
+
     opacity: 1;
 }
 
@@ -137,7 +141,15 @@ nav ul {
 
 
 #menu li {
+  opacity: 0;
   font-size: 2rem;
+  transform: perspective(1000px) translateZ(300px);
+}
+
+#menu li.open {
+  opacity: 1;
+  transform: perspective(0) translateZ(0);
+  transition: all .2s .2s;
 }
 
 /* *********** */
