@@ -132,7 +132,7 @@ nav ul {
   color: yellow;
   text-shadow: 2px 2px 0 purple;
   
-  transition: color 0.3s ease;
+  transition: color .3s ease;
 }
 
 #menu a:hover {
@@ -144,6 +144,7 @@ nav ul {
   opacity: 0;
   font-size: 2rem;
   transform: perspective(1000px) translateZ(300px);
+  transition: all .1s;
 }
 
 #menu li.open {
@@ -179,6 +180,7 @@ header {
     background-position: center;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 
 /* ARROW DIVIDER */
