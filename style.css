@@ -16,15 +16,10 @@
     padding: 0;
 }
 
+
 /* ********** */
 /* NAVIGATION */
 /* ********** */
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 
 /* BURGER MENU */
 
@@ -110,9 +105,8 @@ nav ul {
     transform 0s .3s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: space-between;
   justify-content: space-between;
-
   z-index: 99;
   
   background: rgba(0, 0, 0, .9);
@@ -128,12 +122,9 @@ nav ul {
 }
 
 #menu a {
-  text-decoration: none;
   color: yellow;
   text-shadow: 2px 2px 0 purple;
-  
-  transition: color .3s ease;
-}
+  }
 
 #menu a:hover {
   color: tomato;
@@ -141,10 +132,12 @@ nav ul {
 
 
 #menu li {
+  display: block;
   opacity: 0;
   font-size: 2rem;
   transform: perspective(1000px) translateZ(300px);
   transition: all .1s;
+  text-align: center;
 }
 
 #menu li.open {
@@ -152,6 +145,7 @@ nav ul {
   transform: perspective(0) translateZ(0);
   transition: all ease-in-out .2s .2s;
 }
+
 
 /* *********** */
 /* GRID LAYOUT */
@@ -166,8 +160,10 @@ nav ul {
     align-content: center;
     grid: "a" 100vh
           "b" auto
+          "c" auto
           /1fr; 
 }
+
 
 /* ************** */
 /* HEADER SECTION */
@@ -201,11 +197,34 @@ header {
     height: 50px;
 }
 
+
 /* ************** */
 /* LISTEN SECTION */
 /* ************** */
 
-.listen {
+/* ARROW DIVIDER */
+
+.custom-shape-divider-top-1592785101 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1592785101 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.shape-fill {
+  fill: #000000;
+}
+
+#listen {
     grid-area: b;
 
     display: flex;
@@ -216,7 +235,7 @@ header {
     position: relative;
 }
 
-.listen::before {
+#listen::before {
     content: "";
     position: absolute;
     top: 0;
@@ -237,30 +256,100 @@ header {
     width: 50%; 
     min-width: 280px; 
     height: 80%;
-    height: 400px;
+    min-height: 400px;
 }
 
-/* ARROW DIVIDER */
 
-.custom-shape-divider-top-1592785101 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+/* ************* */
+/* SHOWS SECTION */
+/* ************* */
+
+#shows {
+  grid-area: c;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/paisley3.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.custom-shape-divider-top-1592785101 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
+.show-info {
+  margin: 20px;
+  text-align: center;
+
+  flex: 1 1 300px;
+  background-color: rgba(255, 255, 255, .5);
+
+  border-radius: 10px;
 }
 
-.custom-shape-divider-top-1592785101 .shape-fill {
-    fill: #000000;
+.show-info li:first-child {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  /* border-radius: 15px 15px 0 0; */
 }
+
+.show-info li:first-child h3 {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.show-info li:nth-child(1n + 2) {
+  margin-top: 1.5rem;
+  color: purple;
+  text-shadow: 1px 1px 0 yellow;
+  font-family: "Shrikhand";
+  font-size: 2rem;
+  position: relative
+}
+
+.show-info li:nth-child(2)::before {
+  content: "where:";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  font-family: monospace;
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.show-info li:nth-child(3)::before {
+  content: "when:";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  font-family: monospace;
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.show-info li:nth-child(4)::before {
+  content: "with:";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  font-family: monospace;
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
 
 /* ************ */
 /* TEXT STYLING */
@@ -276,7 +365,7 @@ h1 {
     text-transform: uppercase;
 }
 
-h3 {
+h2 {
     font-family: "Lobster", cursive;
     font-size: calc(1rem + 2.5vw);
     color: yellow;
@@ -284,4 +373,25 @@ h3 {
 
 }
 
+h3 {
+  font-family: "Rammetto One";
+  font-size: 2rem;
+  color: yellow;
+  text-shadow: 5px 5px 0 purple;
+}
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+  transition: all .3s ease;
+}
+
+a:hover {
+  color: tomato;
+}
