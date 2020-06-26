@@ -227,6 +227,8 @@ header {
 #listen {
     grid-area: b;
 
+    padding: 70px 0 60px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,11 +254,36 @@ header {
 
 #bandcamp {
     border: 0;
-    margin: 70px 0;
     width: 50%; 
     min-width: 280px; 
     height: 80%;
     min-height: 400px;
+}
+
+#social-buttons {
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#social-buttons img {
+  height: 55px;
+  width: auto;
+  margin: 10px;
+  
+  filter: brightness(0%) invert(1);
+  transition: all .3s ease-in-out;
+}
+
+#social-buttons img:hover {
+  transform: scale(1.1);
+}
+
+.flipme {
+  transform: scaleX(-1);
 }
 
 
@@ -268,6 +295,7 @@ header {
   grid-area: c;
 
   position: relative;
+  padding: 70px 0 30px;
 
   display: flex;
   flex-flow: row wrap;
@@ -280,14 +308,15 @@ header {
 }
 
 .show-info {
-  margin: 20px;
+  margin: 0 20px 40px;
   text-align: center;
 
   flex: 1 1 300px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .7);
 
   border-radius: 10px;
 }
+
 
 .show-info li:first-child {
   background-color: black;
@@ -297,7 +326,7 @@ header {
 }
 
 .show-info li:first-child h3 {
-  padding: 10px 0;
+  padding: 10px;
   margin: 0;
 }
 
