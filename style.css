@@ -311,7 +311,7 @@ header {
   margin: 0 20px 40px;
   text-align: center;
 
-  flex: 1 1 300px;
+  flex: 1 1 80%;
   background-color: rgba(255, 255, 255, .7);
 
   border-radius: 10px;
@@ -322,7 +322,6 @@ header {
   background-color: black;
   padding: 0;
   margin: 0;
-  /* border-radius: 15px 15px 0 0; */
 }
 
 .show-info li:first-child h3 {
@@ -331,7 +330,7 @@ header {
 }
 
 .show-info li:nth-child(1n + 2) {
-  margin-top: 1.5rem;
+  margin: 1.5rem 10px 0;
   color: purple;
   text-shadow: 1px 1px 0 yellow;
   font-family: "Shrikhand";
