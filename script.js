@@ -1,6 +1,4 @@
-// FIX FOR VH UNITS IN SAFARI
-// document.querySelector('header').style.height = window.innerHeight + 'px';
-// document.querySelector('.listen').style.height = window.innerHeight + 'px';
+// NAV MENU BUTTON
 
 const menuBtn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#menu');
