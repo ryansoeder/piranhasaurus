@@ -161,6 +161,7 @@
     grid: "a" 100vh
           "b" auto
           "c" auto
+          "d" auto
           /1fr; 
 }
 
@@ -375,6 +376,100 @@ header {
   text-shadow: none;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+
+/* ************* */
+/* MEDIA SECTION */
+/* ************* */
+
+#media {
+  grid-area: d;
+
+  position: relative;
+  padding: 70px 50px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: url("img/arch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+#band-pics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 150px;
+  grid-auto-flow: dense;
+
+  margin: 0;
+  grid-gap: 1rem;
+}
+
+#band-pics li {
+  overflow: hidden;
+}
+
+#band-pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-self: center;
+  align-self: center;
+
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all ease-in-out .3s;
+}
+
+#band-pics  li  img:hover {
+  filter: brightness(50%) blur(2px);
+  transform: scale(1.1);
+
+}
+
+
+#band-pics li:nth-child(3n) {
+  grid-column: span 2;
+}
+
+/* lightbox styles */
+
+#lightbox{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: scale(0);
+  transition:
+    opacity ease-in-out .2s,
+    transform 0s .3s;
+}
+
+#lightbox.active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity ease-in-out .2s;
+
+}
+
+#lightbox img{
+  max-height: 90%;
+  max-width: 90%;
 }
 
 
