@@ -45,21 +45,38 @@ body.addEventListener('click', event => {
 
 // LIGHTBOX
 
+function handleLightboxImageClick(image) {
+    lightbox.classList.add('active');
+
+    const img = document.createElement('img');
+
+    img.src = image.src;
+
+    while(lightbox.firstChild){
+        lightbox.removeChild(lightbox.firstChild);
+    }
+
+    lightbox.appendChild(img);
+}
+
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox); 
 
-const images = document.querySelectorAll('.pic')
-images.forEach(image => {
+const pics = document.querySelectorAll('.pic')
+pics.forEach(image => {
     image.addEventListener('click', e => { 
-        lightbox.classList.add('active');
-        const img = document.createElement('img');
-        img.src = image.src;
-        while(lightbox.firstChild){
-            lightbox.removeChild(lightbox.firstChild);
-        }
-        lightbox.appendChild(img);
+        handleLightboxImageClick(image);
     })
+});
+
+const listItems = document.querySelectorAll('.glide__slide');
+
+listItems.forEach(li => {
+    li.addEventListener('click', e => { 
+        handleLightboxImageClick(li.firstElementChild);
+    })
+
 });
 
 lightbox.addEventListener('click', e => { 
