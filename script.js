@@ -1,84 +1,82 @@
 // NAV MENU BUTTON
 
-const body = document.querySelector('body');
-const menuBtn = document.querySelector('#menu-btn');
-const menu = document.querySelector('#menu');
-const menuItems = document.querySelectorAll('#menu li');
+const body = document.querySelector("body");
+const menuBtn = document.querySelector("#menu-btn");
+const menu = document.querySelector("#menu");
+const menuItems = document.querySelectorAll("#menu li");
 let menuOpen = false;
 
-menuBtn.addEventListener('click', () => {
-    if (!menuOpen) {
-        menuBtn.classList.add('open');
-        menu.classList.add('open');
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    menu.classList.add("open");
 
-        menuItems.forEach(item => {item.classList.add('open');});
+    menuItems.forEach((item) => {
+      item.classList.add("open");
+    });
 
-        menuOpen = true;
+    menuOpen = true;
 
-        event.stopPropagation();
+    event.stopPropagation();
+  } else {
+    menuBtn.classList.remove("open");
+    menu.classList.remove("open");
 
-    } else {
-        menuBtn.classList.remove('open');
-        menu.classList.remove('open');
+    menuItems.forEach((item) => {
+      item.classList.remove("open");
+    });
 
-        menuItems.forEach(item => {item.classList.remove('open');});
+    menuOpen = false;
 
-        menuOpen = false;
-
-        event.stopPropagation();
-
-    }
-})
+    event.stopPropagation();
+  }
+});
 
 // close once clicked anywhere
 
-body.addEventListener('click', event => { 
-    
-    if (menuOpen) {
-        menu.classList.remove('open');
-        menuBtn.classList.remove('open');
-        
-        menuOpen = false;
-    }
-});
+body.addEventListener("click", (event) => {
+  if (menuOpen) {
+    menu.classList.remove("open");
+    menuBtn.classList.remove("open");
 
+    menuOpen = false;
+  }
+});
 
 // LIGHTBOX
 
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
+
 function handleLightboxImageClick(image) {
-    lightbox.classList.add('active');
+  lightbox.classList.add("active");
 
-    const img = document.createElement('img');
+  const img = document.createElement("img");
 
-    img.src = image.src;
+  img.src = image.src;
 
-    while(lightbox.firstChild){
-        lightbox.removeChild(lightbox.firstChild);
-    }
+  while (lightbox.firstChild) {
+    lightbox.removeChild(lightbox.firstChild);
+  }
 
-    lightbox.appendChild(img);
+  lightbox.appendChild(img);
 }
 
-const lightbox = document.createElement('div');
-lightbox.id = 'lightbox';
-document.body.appendChild(lightbox); 
-
-const pics = document.querySelectorAll('.pic')
-pics.forEach(image => {
-    image.addEventListener('click', e => { 
-        handleLightboxImageClick(image);
-    })
+const pics = document.querySelectorAll(".pic");
+pics.forEach((image) => {
+  image.addEventListener("click", (e) => {
+    handleLightboxImageClick(image);
+  });
 });
 
-const listItems = document.querySelectorAll('.glide__slide');
-
-listItems.forEach(li => {
-    li.addEventListener('click', e => { 
-        handleLightboxImageClick(li.firstElementChild);
-    })
-
+const listItems = document.querySelectorAll(".glide__slide");
+listItems.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    handleLightboxImageClick(li.firstElementChild);
+  });
 });
 
-lightbox.addEventListener('click', e => { 
-    lightbox.classList.remove('active');
+lightbox.addEventListener("click", (e) => {
+  lightbox.classList.remove("active");
 });
