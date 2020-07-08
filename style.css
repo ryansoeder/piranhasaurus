@@ -468,7 +468,7 @@ header {
   grid-area: e;
 
   position: relative;
-  padding: 70px 70px;
+  padding: 70px 65px;
   min-width: 0;
 
   display: flex;
@@ -487,8 +487,8 @@ header {
 }
 
 .glide img {
+  height: auto;
   width: 100%;
-  height: 300px;
   object-fit: cover;
   position: relative;
 }
@@ -497,15 +497,12 @@ header {
   transform: scale(0.9);
   transition: all ease 0.5s;
   filter: brightness(50%);
+  text-align: center;
 }
 
 .glide__slide--active {
   transform: scale(1);
   filter: brightness(100%);
-}
-
-.glide__slide > img {
-  position: relative;
 }
 
 #merch1 {
