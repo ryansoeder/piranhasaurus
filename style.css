@@ -693,9 +693,51 @@ a:hover {
   .glide img {
     width: 300px;
   }
+}
 
 @media (min-width: 650px) {
   .glide__slide {
     text-align: inherit;
   }
+
+  #menu-btn {
+    display: none;
+  }
+
+  #menu {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 0;
+  
+    transform: scale(1);
+  
+    opacity: 1;
+  
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+    z-index: 99;
+  
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
+    font-family: "Rammetto ONE";
+  }
+  
+  #menu li {
+    display: block;
+    opacity: 1;
+    font-size: rem;
+    transform: perspective(0px) translateZ(0px);
+    transition: none;
+    text-align: center;
+  }
+
+  header {
+    padding-top: 70px;
+  }
+
 }
