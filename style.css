@@ -488,7 +488,7 @@ header {
 
 .glide img {
   height: auto;
-  width: 100%;
+  width: 200px;
   object-fit: cover;
   position: relative;
 }
@@ -503,6 +503,18 @@ header {
 .glide__slide--active {
   transform: scale(1);
   filter: brightness(100%);
+}
+
+#small__screen__arrow {
+  margin-top: 10px;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 #merch1 {
@@ -670,5 +682,20 @@ a:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5);
     align-items: flex-start;
+  }
+}
+
+@media (min-width: 500px) {
+  #small__screen__arrow {
+    display: none;
+}
+
+  .glide img {
+    width: 300px;
+  }
+
+@media (min-width: 650px) {
+  .glide__slide {
+    text-align: inherit;
   }
 }

@@ -81,15 +81,16 @@
   cursor: -webkit-grabbing;
 }
 
-@media (max-width: 501px) {
+@media (max-width: 499px) {
   .glide__arrow {
-    top: 110%;
+    /* top: 110%; */
+    display: none;
   }
-  .glide__arrow--left {
+  /* .glide__arrow--left {
     left: 0;
   }
 
   .glide__arrow--right {
     right: 0;
-  }
+  } */
 }

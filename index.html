@@ -234,6 +234,9 @@
             </button>
           </div>
         </div>
+
+        <span id="small__screen__arrow">&#8592; swipe &#8594;</span>
+
       </section>
     </div>
 
@@ -243,12 +246,15 @@
       new Glide(".glide", {
         type: "carousel",
         startAt: 0,
-        perView: 3,
+        perView: 4,
         breakpoints: {
-          600: {
+          1150: {
+            perView: 3,
+          },
+          900: {
             perView: 2,
           },
-          500: {
+          600: {
             perView: 1,
           },
         },
