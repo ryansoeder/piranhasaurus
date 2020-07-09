@@ -43,6 +43,27 @@ body.addEventListener("click", (event) => {
   }
 });
 
+// sticky nav bar on larger windows
+
+window.addEventListener('resize' , event => {
+  let windowWidth = event.target.innerWidth;
+  if (windowWidth >= 650) {
+    menu.classList.add("absolute");
+    menu.classList.remove("sticky");
+  } 
+  
+})
+
+// const sticky = menu.offsetTop;
+
+// if (window.pageYOffset >= sticky) {
+//   menu.classList.remove('absolute');
+//   menu.classList.add('sticky');
+// } else { 
+//   menu.classList.add('absolute');
+//   menu.classList.remove('sticky');
+// }
+
 // LIGHTBOX
 
 const lightbox = document.createElement("div");
@@ -80,3 +101,10 @@ listItems.forEach((li) => {
 lightbox.addEventListener("click", (e) => {
   lightbox.classList.remove("active");
 });
+
+// Sticky nave bar on larger windows
+
+const sticky = menu.offsetTop;
+if (window.innerWidth >= 650 && window.pageYOffset >= sticky) {
+  menu.classList.toggle('sticky');
+} 
