@@ -42,7 +42,6 @@ body.addEventListener("click", (event) => {
   }
 });
 
-
 // STICKY NAV BAR ON LARGER WINDOWS
 
 let windowWidth = window.innerWidth;
@@ -63,7 +62,7 @@ if (windowWidth >= 650) {
   absoluteMenu();
 } else {
   stickyMenu();
-};
+}
 
 window.onscroll = () => {
   let windowYOffset = window.pageYOffset;
@@ -74,7 +73,6 @@ window.onscroll = () => {
     absoluteMenu();
   }
 };
-
 
 // LIGHTBOX
 
@@ -98,18 +96,18 @@ function handleLightboxImageClick(image) {
 
 const pics = document.querySelectorAll(".pic");
 pics.forEach((image) => {
-  image.addEventListener("click", event => {
+  image.addEventListener("click", (event) => {
     handleLightboxImageClick(image);
   });
 });
 
 const listItems = document.querySelectorAll(".glide__slide");
 listItems.forEach((li) => {
-  li.addEventListener('click', event => {
+  li.addEventListener("click", (event) => {
     handleLightboxImageClick(li.firstElementChild);
   });
 });
 
-lightbox.addEventListener('click', event => {
+lightbox.addEventListener("click", (event) => {
   lightbox.classList.remove("active");
 });
