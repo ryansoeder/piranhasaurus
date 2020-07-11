@@ -45,24 +45,46 @@ body.addEventListener("click", (event) => {
 
 // sticky nav bar on larger windows
 
-window.addEventListener('resize' , event => {
-  let windowWidth = event.target.innerWidth;
-  if (windowWidth >= 650) {
-    menu.classList.add("absolute");
-    menu.classList.remove("sticky");
-  } 
-  
-})
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+let menuHeight = menu.offsetHeight;
 
-// const sticky = menu.offsetTop;
+function stickyMenu() {
+  menu.classList.remove("absolute");
+  menu.classList.add("sticky");
+}
 
-// if (window.pageYOffset >= sticky) {
-//   menu.classList.remove('absolute');
-//   menu.classList.add('sticky');
-// } else { 
-//   menu.classList.add('absolute');
-//   menu.classList.remove('sticky');
-// }
+function absoluteMenu() {
+  menu.classList.remove("sticky");
+  menu.classList.add("absolute");
+}
+
+if (windowWidth >= 650) {
+  absoluteMenu();
+} else {
+  stickyMenu();
+}
+
+window.onscroll = () => {
+  let windowYOffset = window.pageYOffset;
+
+  if (windowYOffset >= windowHeight - menuHeight) {
+    stickyMenu();
+  } else if (windowYOffset < windowHeight - menuHeight && windowWidth >= 650) {
+    absoluteMenu();
+  }
+};
+
+// window.addEventListener('resize' , event => {
+
+//   if (windowWidth >= 650) {
+//     menu.classList.add("absolute");
+//     menu.classList.remove("sticky");
+//   } else {
+//     menu.classList.remove("absolute");
+//     menu.classList.add("sticky");
+//   }
+// });
 
 // LIGHTBOX
 
@@ -101,10 +123,3 @@ listItems.forEach((li) => {
 lightbox.addEventListener("click", (e) => {
   lightbox.classList.remove("active");
 });
-
-// Sticky nave bar on larger windows
-
-const sticky = menu.offsetTop;
-if (window.innerWidth >= 650 && window.pageYOffset >= sticky) {
-  menu.classList.toggle('sticky');
-} 
