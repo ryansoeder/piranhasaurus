@@ -378,6 +378,10 @@ header {
   font-size: 1.2rem;
 }
 
+.show-info a {
+  color: purple;
+}
+
 /* ************* */
 /* MEDIA SECTION */
 /* ************* */
