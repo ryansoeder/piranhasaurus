@@ -605,6 +605,12 @@ a:hover {
   }
 }
 
+@media (min-width: 445px) {
+  #social-buttons img {
+    height: 40px;
+  }
+}
+
 @media (min-width: 500px) {
   #small__screen__arrow {
     display: none;
@@ -694,9 +700,5 @@ a:hover {
     height: 70%;
     min-height: 300px;
     order: -1;
-  }
-
-  #social-buttons img {
-    height: 40px;
   }
 }

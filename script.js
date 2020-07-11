@@ -33,7 +33,6 @@ menuBtn.addEventListener("click", () => {
 });
 
 // close once clicked anywhere
-
 body.addEventListener("click", (event) => {
   if (menuOpen) {
     menu.classList.remove("open");
@@ -43,7 +42,8 @@ body.addEventListener("click", (event) => {
   }
 });
 
-// sticky nav bar on larger windows
+
+// STICKY NAV BAR ON LARGER WINDOWS
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -63,7 +63,7 @@ if (windowWidth >= 650) {
   absoluteMenu();
 } else {
   stickyMenu();
-}
+};
 
 window.onscroll = () => {
   let windowYOffset = window.pageYOffset;
@@ -75,16 +75,6 @@ window.onscroll = () => {
   }
 };
 
-// window.addEventListener('resize' , event => {
-
-//   if (windowWidth >= 650) {
-//     menu.classList.add("absolute");
-//     menu.classList.remove("sticky");
-//   } else {
-//     menu.classList.remove("absolute");
-//     menu.classList.add("sticky");
-//   }
-// });
 
 // LIGHTBOX
 
@@ -108,18 +98,18 @@ function handleLightboxImageClick(image) {
 
 const pics = document.querySelectorAll(".pic");
 pics.forEach((image) => {
-  image.addEventListener("click", (e) => {
+  image.addEventListener("click", event => {
     handleLightboxImageClick(image);
   });
 });
 
 const listItems = document.querySelectorAll(".glide__slide");
 listItems.forEach((li) => {
-  li.addEventListener("click", (e) => {
+  li.addEventListener('click', event => {
     handleLightboxImageClick(li.firstElementChild);
   });
 });
 
-lightbox.addEventListener("click", (e) => {
+lightbox.addEventListener('click', event => {
   lightbox.classList.remove("active");
 });
