@@ -100,7 +100,7 @@
   transition: opacity ease-in-out 0.3s, transform 0s 0.3s;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
   z-index: 99;
 
@@ -137,12 +137,10 @@
 }
 
 #menu li {
-  display: block;
   opacity: 0;
   font-size: 2rem;
   transform: perspective(1000px) translateZ(300px);
   transition: all 0.1s;
-  text-align: center;
 }
 
 #menu li.open {
@@ -169,7 +167,8 @@
     "e" auto
     / 1fr;
 
-    background-color: black;
+  background-color: black;
+  grid-gap: 0.5rem;
 }
 
 /* ************** */
@@ -523,7 +522,7 @@ header {
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
 
-#merch1 {
+.merch-shadow {
   position: absolute;
   top: 0;
   right: 0;
@@ -543,78 +542,7 @@ header {
   transition: all ease-in-out 0.3s;
 }
 
-#merch1:hover {
-  opacity: 1;
-}
-
-#merch2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  font-family: sans-serif;
-  font-size: 3rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all ease-in-out 0.3s;
-}
-
-#merch2:hover {
-  opacity: 1;
-}
-
-#merch3 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  font-family: sans-serif;
-  font-size: 3rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all ease-in-out 0.3s;
-}
-
-#merch3:hover {
-  opacity: 1;
-}
-#merch4 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  font-family: sans-serif;
-  font-size: 3rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transition: all ease-in-out 0.3s;
-}
-
-#merch4:hover {
+.merch-shadow:hover {
   opacity: 1;
 }
 
@@ -653,7 +581,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: purple;
   transition: all 0.3s ease;
 }
 
@@ -666,25 +593,7 @@ a:hover {
 /* ************* */
 
 @media (hover: none) {
-  #merch1 {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: flex-start;
-  }
-
-  #merch2 {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: flex-start;
-  }
-
-  #merch3 {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: flex-start;
-  }
-
-  #merch4 {
+  .merch-shadow {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5);
     align-items: flex-start;
@@ -702,6 +611,11 @@ a:hover {
 }
 
 @media (min-width: 650px) {
+  .custom-shape-divider-bottom-1592784972,
+  .custom-shape-divider-top-1592785101 {
+    display: none;
+  }
+
   .glide__slide {
     text-align: inherit;
   }
@@ -733,12 +647,15 @@ a:hover {
   }
 
   #menu li {
-    display: inline-block;
+    flex: 1 0 auto;
     opacity: 1;
-    font-size: rem;
+    font-size: 1.5rem;
     transform: perspective(0px) translateZ(0px);
     transition: none;
-    text-align: center;
+  }
+
+  #menu a {
+    display: block;
   }
 
   header {
@@ -754,11 +671,7 @@ a:hover {
       "d d" auto
       "e e" auto
       / 1fr 1fr;
-    grid-gap: .5rem;
-  }
-  .custom-shape-divider-bottom-1592784972,
-  .custom-shape-divider-top-1592785101 {
-    display: none;
+    grid-gap: 0.5rem;
   }
 
   #listen {
@@ -767,7 +680,7 @@ a:hover {
 
   #listen::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("img/color.jpg");
+      url("img/color.jpg");
 
     transform: scaleY(1) scaleX(-1);
   }
@@ -781,5 +694,4 @@ a:hover {
   #social-buttons img {
     height: 40px;
   }
-  
 }
