@@ -425,7 +425,8 @@ header {
 }
 
 #band-pics li img:hover {
-  filter: brightness(50%) blur(2px);
+  filter: blur(2px) contrast(150%);
+  ;
   transform: scale(1.1);
 }
 
