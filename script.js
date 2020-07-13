@@ -42,37 +42,47 @@ body.addEventListener("click", (event) => {
   }
 });
 
-// STICKY NAV BAR ON LARGER WINDOWS
+// // STICKY NAV BAR ON LARGER WINDOWS
 
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
-let menuHeight = menu.offsetHeight;
+// let windowWidth = window.innerWidth;
 
 function stickyMenu() {
-  menu.classList.remove("absolute");
-  menu.classList.add("sticky");
+  menu.style.position = "fixed";
+  menu.style.bottom = "inherit";
+  menu.style.top = "0";
 }
 
 function absoluteMenu() {
-  menu.classList.remove("sticky");
-  menu.classList.add("absolute");
-}
-
-if (windowWidth >= 650) {
-  absoluteMenu();
-} else {
-  stickyMenu();
+  menu.style.position = "absolute";
+  menu.style.bottom = "0";
+  menu.style.top = "inherit";
 }
 
 window.onscroll = () => {
   let windowYOffset = window.pageYOffset;
+  let windowHeight = window.innerHeight;
+  let menuHeight = menu.offsetHeight;  
 
   if (windowYOffset >= windowHeight - menuHeight) {
     stickyMenu();
-  } else if (windowYOffset < windowHeight - menuHeight && windowWidth >= 650) {
+    console.log("sticky");
+
+  } else {
     absoluteMenu();
-  }
+    console.log("absolute");
+  };
 };
+
+// window.addEventListener('resize' , () => {
+//   let windowWidth = window.innerWidth;
+
+//   console.log(windowWidth);
+//   if (windowWidth >= 650) {
+//     menu.style.position = 'absolute';
+//   } else {
+//     menu.style.position = 'fixed';
+//   }
+// });
 
 // LIGHTBOX
 
