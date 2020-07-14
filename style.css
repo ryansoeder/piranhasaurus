@@ -427,7 +427,6 @@ header {
   margin: 0;
 }
 
-
 #band-pics img {
   width: 100%;
   height: auto;
@@ -650,7 +649,7 @@ a:hover {
   #menu {
     position: absolute;
     bottom: 0;
-    top: inherit;  
+    top: inherit;
 
     height: auto;
     margin: 0;

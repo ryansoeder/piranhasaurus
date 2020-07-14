@@ -44,8 +44,6 @@ body.addEventListener("click", (event) => {
 
 // // STICKY NAV BAR ON LARGER WINDOWS
 
-// let windowWidth = window.innerWidth;
-
 function stickyMenu() {
   menu.style.position = "fixed";
   menu.style.bottom = "inherit";
@@ -61,16 +59,15 @@ function absoluteMenu() {
 window.onscroll = () => {
   let windowYOffset = window.pageYOffset;
   let windowHeight = window.innerHeight;
-  let menuHeight = menu.offsetHeight;  
+  let menuHeight = menu.offsetHeight;
 
   if (windowYOffset >= windowHeight - menuHeight) {
     stickyMenu();
     console.log("sticky");
-
   } else {
     absoluteMenu();
     console.log("absolute");
-  };
+  }
 };
 
 // window.addEventListener('resize' , () => {
