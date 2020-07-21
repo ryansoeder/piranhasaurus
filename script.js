@@ -70,7 +70,6 @@ window.onscroll = () => {
   }
 };
 
-
 // LIGHTBOX
 
 const lightbox = document.createElement("div");
