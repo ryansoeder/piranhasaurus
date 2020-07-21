@@ -42,7 +42,7 @@ body.addEventListener("click", (event) => {
   }
 });
 
-// // STICKY NAV BAR ON LARGER WINDOWS
+// STICKY NAV BAR ON LARGER WINDOWS
 
 function stickyMenu() {
   menu.style.position = "fixed";
@@ -70,16 +70,6 @@ window.onscroll = () => {
   }
 };
 
-// window.addEventListener('resize' , () => {
-//   let windowWidth = window.innerWidth;
-
-//   console.log(windowWidth);
-//   if (windowWidth >= 650) {
-//     menu.style.position = 'absolute';
-//   } else {
-//     menu.style.position = 'fixed';
-//   }
-// });
 
 // LIGHTBOX
 
