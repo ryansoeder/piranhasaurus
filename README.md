@@ -5,7 +5,7 @@ Code Louisville Optional Requirements:
 |Requirement | Execution|
 |------------|----------|
 |"Hamburger" Menu | "NAVIGATION" section in **style.css**<br>"NAV MENU BUTTON" section in **script.js**|
-|Grid | Defined in "GRID LAYOUT" section in **style.css**|
+|Grid | Defined in "GRID LAYOUT" section in **style.css**<br>"MEDIA" section images are populated with implicit grid using "grid-template-columns: repeat(auto-fit...);" |
 |Flexbox | "LISTEN," "SHOWS," "MEDIA," "MERCH" sections and "#menu-btn" layed out with flex (among many others)|
 |Media Queries/Mobile First | Built mobile first, media queries found at the bottom of **style.css**|
 |JavaScript Math Operation | In "STICKY NAV BAR ON LARGER WINDOWS" section of **script.js**, the if statement uses (windowYOffset >= windowHeight - menuHeight) as its condition to mabe the nav bar sticky at the top of the screen once the wondow has scrolled ot that point|
