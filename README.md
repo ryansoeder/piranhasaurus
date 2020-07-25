@@ -1,7 +1,7 @@
 # Website for Piranhasaurus #
 ### KY's best and only surf punk rockabilly band. ###
-Live at: https://ryansoeder.github.io/piranhasaurus/<br><br>
-Code Louisville Optional Requirements:
+Live at: https://ryansoeder.github.io/piranhasaurus/<br><br><br>
+**Code Louisville Optional Requirements:**
 |Requirement | Execution|
 |------------|----------|
 |"Hamburger" Menu | &#8226; "NAVIGATION" section in **style.css**<br> &#8226; "NAV MENU BUTTON" section in **script.js**|
