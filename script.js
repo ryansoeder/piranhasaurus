@@ -63,10 +63,8 @@ window.onscroll = () => {
 
   if (windowYOffset >= windowHeight - menuHeight) {
     stickyMenu();
-    console.log("sticky");
   } else {
     absoluteMenu();
-    console.log("absolute");
   }
 };
 
